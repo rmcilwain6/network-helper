@@ -1,0 +1,25 @@
+{
+  "name": "network-helper",
+  "version": "1.0.0",
+  "description": "A tool for helping keep track of your personal and professional network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmcilwain6/network-helper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rmcilwain6/network-helper/issues"
+  },
+  "homepage": "https://github.com/rmcilwain6/network-helper#readme",
+  "devDependencies": {
+    "electron": "^39.1.2"
+  }
+}
