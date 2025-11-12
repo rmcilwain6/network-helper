@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.ts',
+  entry: './src/main/index.ts',
   target: 'electron-main',
   module: {
     rules: [
@@ -19,9 +19,13 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    libraryTarget: 'module',
+    library: {
+      type: 'module'
+    }
   },
   experiments: {
     outputModule: true,
   },
+  externalsType: 'module',
+  externals: ['better-sqlite3', 'electron'],
 };

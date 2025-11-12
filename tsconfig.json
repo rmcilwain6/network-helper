@@ -2,31 +2,28 @@
   "compilerOptions": {
     // File Layout
     "rootDir": "./src",
-    "outDir": "./dist",
 
     // Environment Settings
-    "module": "nodenext",
+    "module": "esnext",
     "target": "esnext",
-    // Add DOM to lib since React runs in the browser
+    "moduleResolution": "bundler",
     "lib": ["esnext", "dom"],
     "types": ["node"],
 
-    // Other Outputs
+    // Development
     "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
 
     // Stricter Typechecking Options
+    "strict": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "noUncheckedSideEffectImports": true,
 
-    // Recommended Options
-    "strict": true,
+    // React/Build Setup
     "jsx": "react",
     "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-    "esModuleInterop": true  // Add this for React imports to work smoothly
+    "esModuleInterop": true
   }
 }
