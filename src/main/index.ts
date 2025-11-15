@@ -1,23 +1,30 @@
 import { app, BrowserWindow } from 'electron';
 import path from 'path';
 import { SQLiteDatabase } from './database/sqlite';
+import { setupContactIPC } from './contacts';
 
 let database: SQLiteDatabase;
 
 function createWindow() {
+  const appPath = app.getAppPath();
+
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true,
+      preload: path.join(appPath, 'dist', 'preload.js'),
+    },
   });
 
-  const appPath = app.getAppPath();
   const htmlPath = path.join(appPath, 'dist', 'renderer', 'index.html');
-
   win.loadFile(htmlPath);
 }
 
 app.whenReady().then(() => {
   database = new SQLiteDatabase();
+  setupContactIPC(database);
   createWindow();
 });
 
