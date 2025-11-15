@@ -5,6 +5,7 @@ export const CREATE_CONTACTS_TABLE = `
     location TEXT,
     last_contact TEXT,
     contact_frequency TEXT,
+    custom_frequency_days TEXT,
     notes TEXT,
     tags TEXT,
     created_at TEXT NOT NULL,
