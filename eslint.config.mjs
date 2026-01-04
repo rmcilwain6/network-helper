@@ -16,6 +16,7 @@ export default defineConfig([
     rules: {
       'no-unused-vars': 'warn',
       'no-undef': 'warn',
+      'linebreak-style': ['error', 'unix'],
     },
   },
   tseslint.configs.recommended,
