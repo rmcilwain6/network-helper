@@ -26,6 +26,12 @@ describe('Contact Types', () => {
     it('should accept minimal contact input', () => {
       const input: CreateContactInput = {
         name: 'Jane Smith',
+        contactFrequency: undefined,
+        customFrequencyDays: undefined,
+        lastContact: undefined,
+        location: undefined,
+        notes: undefined,
+        tags: undefined,
       };
 
       expect(input.name).toBe('Jane Smith');
@@ -45,6 +51,11 @@ describe('Contact Types', () => {
         const input: CreateContactInput = {
           name: 'Test',
           contactFrequency: freq,
+          customFrequencyDays: undefined,
+          lastContact: undefined,
+          location: undefined,
+          notes: undefined,
+          tags: undefined,
         };
         expect(input.contactFrequency).toBe(freq);
       });

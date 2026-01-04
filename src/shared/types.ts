@@ -20,12 +20,12 @@ export interface Contact {
 
 export interface CreateContactInput {
   name: string;
-  location?: string;
-  lastContact?: string;
-  contactFrequency?: ContactFrequency;
-  customFrequencyDays?: number;
-  notes?: string;
-  tags?: string[];
+  location: string | undefined;
+  lastContact: string | undefined;
+  contactFrequency: ContactFrequency | undefined;
+  customFrequencyDays: number | undefined;
+  notes: string | undefined;
+  tags: string[] | undefined;
 }
 
 export interface UpdateContactInput extends Partial<CreateContactInput> {
